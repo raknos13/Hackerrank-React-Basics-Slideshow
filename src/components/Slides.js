@@ -4,15 +4,12 @@ function Slides({ slides }) {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
 	function handleNext() {
-		currentSlideIndex < slides.length - 1
-			? setCurrentSlideIndex(currentSlideIndex + 1)
-			: setCurrentSlideIndex(0);
+		currentSlideIndex < slides.length - 1 &&
+			setCurrentSlideIndex(currentSlideIndex + 1);
 	}
 
 	function handlePrevious() {
-		currentSlideIndex > 0
-			? setCurrentSlideIndex(currentSlideIndex - 1)
-			: setCurrentSlideIndex(slides.length - 1);
+		currentSlideIndex > 0 && setCurrentSlideIndex(currentSlideIndex - 1);
 	}
 
 	function handleRestart() {
@@ -34,6 +31,7 @@ function Slides({ slides }) {
 					data-testid='button-prev'
 					className='small'
 					onClick={handlePrevious}
+                    disabled={currentSlideIndex === 0}
 				>
 					Prev
 				</button>
@@ -41,6 +39,7 @@ function Slides({ slides }) {
 					data-testid='button-next'
 					className='small'
 					onClick={handleNext}
+                    disabled={currentSlideIndex === slides.length - 1}
 				>
 					Next
 				</button>
