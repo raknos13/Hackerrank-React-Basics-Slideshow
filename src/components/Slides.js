@@ -31,7 +31,7 @@ function Slides({ slides }) {
 					data-testid='button-prev'
 					className='small'
 					onClick={handlePrevious}
-                    disabled={currentSlideIndex === 0}
+					disabled={currentSlideIndex === 0}
 				>
 					Prev
 				</button>
@@ -39,7 +39,7 @@ function Slides({ slides }) {
 					data-testid='button-next'
 					className='small'
 					onClick={handleNext}
-                    disabled={currentSlideIndex === slides.length - 1}
+					disabled={currentSlideIndex === slides.length - 1}
 				>
 					Next
 				</button>
