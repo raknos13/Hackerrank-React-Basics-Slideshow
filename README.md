@@ -1,5 +1,7 @@
 # React: Slideshow App
 
+The best solution for Hackerrank's React (basic) Slideshow app using best coding practices.
+
 ## Environment 
 
 - React Version: 18.2.0
